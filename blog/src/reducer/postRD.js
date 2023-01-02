@@ -1,6 +1,4 @@
 import produce from "immer";
-import faker from "@faker-js/faker";
-import shortId from "shortid";
 
 //전역 상태 초기값
 const initialState = {

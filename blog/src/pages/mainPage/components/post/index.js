@@ -1,15 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import Content from "./content/content";
 import PostForm from "./postForm/form";
-import { ALL_POSTS_REQUEST } from "../../../../reducer/postRD";
 import Pagination from "../paginagion/pagination";
 import axios from "axios";
 
 const Post = () => {
-  // const dispatch = useDispatch();
-  // const { allposts } = useSelector((state) => state.postReducer);
-
   const [post, setPost] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(5);
