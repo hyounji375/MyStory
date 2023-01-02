@@ -10,6 +10,8 @@ const userRouter = require("./routes/user");
 const db = require("./models");
 const passportConfig = require("./passport");
 
+const PORT = process.env.PORT || 3030;
+
 dotenv.config();
 const app = express();
 db.sequelize
@@ -47,6 +49,6 @@ app.use(express.static("build"));
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/build/index.html");
 });
-app.listen(3030, () => {
-  console.log("3030 서버 실행 중...");
+app.listen(PORT, () => {
+  console.log("서버 실행 중...");
 });
